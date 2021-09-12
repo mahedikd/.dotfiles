@@ -1,0 +1,118 @@
+#!/bin/sh
+alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias nvimrc='nvim ~/.config/nvim/'
+
+# alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
+
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
+# easier to read disk
+alias df='df -h'     # human-readable sizes
+alias free='free -m' # show sizes in MB
+
+# get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4 | head -5'
+
+# get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3 | head -5'
+
+# gpg encryption
+# verify signature for isos
+alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
+# receive the key of a developer
+alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
+
+# For when keys break
+alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
+
+# misc 1
+alias c='clear'
+alias decrypt='gpg '
+alias encrypt='gpg -c --cipher-algo AES256 '
+alias f='sudo find / -iname'
+alias h='history'
+alias hs='history 4000| grep'
+alias hsi='history 4000| grep -i'
+alias la='ls -la --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mkdir='mkdir -pv'
+alias ping='ping -c 5'
+alias pip='pip3'
+alias rm='rm -rf'
+alias size='du -d1 -hc'
+
+# misc 2
+alias fastping='ping -c 100 -s.2'
+alias myip='curl ipinfo.io/ip'
+alias ovatovmdk='tar -xvf'
+alias p10kup='git -C ${ZDOTDIR}/plugins/powerlevel10k pull'
+alias ports='netstat -tulanp'
+alias shut='shutdown -P 0'
+alias simplehttpserver='python -m SimpleHTTPServer 8000'
+alias speed='speedtest-cli --single'
+alias vditoqcow2='qemu-img convert -f vdi -O qcow2' #nameOfTheFile #nameOfOutputFile
+alias vmdktoqcow2='qemu-img convert -O qcow2' #nameOfTheFile #nameOfOutputFile
+alias vram='~/Code/scripts/vramfs_start.sh; disown'
+alias vramK='pkill vramfs'
+alias wget='wget -c'
+alias windowclass="xprop | grep 'CLASS'"
+
+# sys
+alias clean='sudo pacman -Scc'
+alias install='sudo pacman -S'
+alias purge='sudo pacman -Rns $(pacman -Qtdq)'
+alias recover='testdisk'
+alias remove='sudo pacman -Rns'
+alias status='systemctl status'
+alias update='sudo pacman -Sy'
+alias updateinitramfs='sudo mkinitcpio -P'
+alias upgrade='sudo pacman -Su'
+
+# docker
+alias dockercontainersize='docker ps -as'
+alias server='docker start db && docker start webserver && docker start wordpress'
+alias serverstop='docker stop wordpress && docker stop webserver && docker stop db'
+
+# conf
+alias kittyconfig='vi ~/.config/kitty/kitty.conf'
+alias lvimconfig='vi ~/.config/lvim/config.lua'
+alias mongoo='mongod --config /etc/mongodb.conf'
+alias nvimconfig='vi ~/.config/nvim/init.vim'
+alias opacityconfig='vi ~/.devilspie/opacity.ds'
+alias p10='vi ${ZDOTDIR}/.p10k.zsh'
+alias tmuxconfig='vi ~/.tmux.conf.local'
+alias ups='source ~/.config/zsh/.zshrc'
+alias zshconfig='vi ~/.config/zsh/zshrc'
+
+# editor
+alias nano='vi'
+alias v='nvim'
+alias vi='lvim'
+alias vim='lvim'
+
+# git
+alias gcd='git clone --depth=1'
+alias lg='lazygit'
+alias gitpagesetup='git subtree push --prefix build origin gh-pages'
+
+# npm
+alias npml='npm ls --depth=0'
+alias npmlg='npm ls --depth=0 -g'
+
+# tmux #
+alias t="tmux"
+alias ta="t a -t"
+alias tls="t ls"
+alias tn="t new -t"
+alias tk="t kill-session -t"
+alias tks="t kill-server"
+

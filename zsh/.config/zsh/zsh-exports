@@ -1,0 +1,14 @@
+#!/bin/sh
+export PATH="$HOME/.local/bin":$PATH
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+# tldr
+export TLDR_HEADER='magenta bold underline'
+export TLDR_QUOTE='italic'
+export TLDR_DESCRIPTION='green'
+export TLDR_CODE='red'
+export TLDR_PARAM='blue'
+
+export VISUAL=lvim
+export EDITOR="$VISUAL"
+export PATH="$PATH:`yarn global bin`"
