@@ -1,10 +1,8 @@
-
 !*.svg
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/settings.json
 !.vscode/tasks.json
-!package.json
 *$py.class
 **/client_secret.json
 **/client_secrets.json
@@ -151,3 +149,6 @@ web_modules/
 wheels/
 yarn-debug.log*
 yarn-error.log*
+!package.json
+!.eslintrc.json
+!.prettierrc.json
