@@ -351,8 +351,8 @@ lvim.builtin.which_key.mappings[","] = {
 	t = { ":ToggleTerm<CR>", "Open floting terminal" },
 	w = { ":SudaWrite<CR>", "Save with sudo" },
 }
-lvim.builtin.which_key.mappings["Q"] = {
-	name = "+Quit",
+lvim.builtin.which_key.mappings["S"] = {
+	name = "+Session",
 	s = { "<cmd>lua require('persistence').load()<cr>", "Restore for current dir" },
 	l = { "<cmd>lua require('persistence').load(last=true)<cr>", "Restore last session" },
 	d = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
