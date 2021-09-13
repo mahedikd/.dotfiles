@@ -294,7 +294,7 @@ lvim.lang.yaml.formatters = { { exe = "prettier" } }
 vim.opt.wrap = true
 vim.opt.cursorline = false
 vim.opt.history = 1000
-vim.opt.lazyredraw = true
+vim.opt.lazyredraw = false
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
