@@ -24,6 +24,9 @@ lvim.colorscheme = "onedarker"
 lvim.format_on_save = true
 lvim.log.level = "warn"
 lvim.lsp.diagnostics.virtual_text = false
+lvim.builtin.nvimtree.gitignore = 1
+lvim.builtin.nvimtree.ignore = { "node_modules" }
+lvim.builtin.telescope.defaults.file_ignore_patterns = { "node_modules", "build" }
 
 lvim.builtin.dashboard.custom_header = {
 
@@ -278,10 +281,10 @@ lvim.lang.javascript.formatters = { { exe = "prettier" } }
 lvim.lang.typescript.formatters = lvim.lang.javascript.formatters
 lvim.lang.javascriptreact.formatters = lvim.lang.javascript.formatters
 lvim.lang.typescriptreact.formatters = lvim.lang.javascript.formatters
--- lvim.lang.javascript.linters = { { exe = "eslint" } }
--- lvim.lang.javascriptreact.linters = lvim.lang.javascript.linters
--- lvim.lang.typescript.linters = lvim.lang.javascript.linters
--- lvim.lang.typescriptreact.linters = lvim.lang.javascript.linters
+lvim.lang.javascript.linters = { { exe = "eslint" } }
+lvim.lang.javascriptreact.linters = lvim.lang.javascript.linters
+lvim.lang.typescript.linters = lvim.lang.javascript.linters
+lvim.lang.typescriptreact.linters = lvim.lang.javascript.linters
 
 lvim.lang.css.formatters = { { exe = "prettier" } }
 -- lvim.lang.emmet.active = true
@@ -300,7 +303,7 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.timeoutlen = 300
 vim.opt.cmdheight = 1
-vim.opt.undodir = CACHE_PATH .. "/undodir"
+-- vim.opt.undodir = CACHE_PATH .. "/undodir"
 vim.opt.undofile = true
 vim.opt.foldmethod = "manual" -- expr for auto folding
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

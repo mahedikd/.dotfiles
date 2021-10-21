@@ -11,4 +11,4 @@ export TLDR_PARAM='blue'
 
 export VISUAL=lvim
 export EDITOR="$VISUAL"
-export PATH="$PATH:`yarn global bin`"
+export PATH="$PATH:`yarn global bin --offline`"
