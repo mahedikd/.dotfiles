@@ -73,7 +73,7 @@ alias purge='sudo pacman -Rns $(pacman -Qtdq)'
 alias recover='testdisk'
 alias remove='sudo pacman -Rns'
 alias status='systemctl status'
-alias update='sudo pacman -Sy'
+alias update='sudo pacman -Syu'
 alias updateinitramfs='sudo mkinitcpio -P'
 alias upgrade='sudo pacman -Su'
 

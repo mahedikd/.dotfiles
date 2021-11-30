@@ -28,19 +28,19 @@ lvim.builtin.nvimtree.gitignore = 1
 lvim.builtin.nvimtree.ignore = { "node_modules" }
 lvim.builtin.telescope.defaults.file_ignore_patterns = { "node_modules", "build" }
 
-lvim.builtin.dashboard.custom_header = {
+-- lvim.builtin.dashboard.custom_header = {
 
-	"𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ",
-	"                                            ",
-	"       ██╗    ██╗   ██╗██╗███╗   ███╗       ",
-	"       ██║    ██║   ██║██║████╗ ████║       ",
-	"       ██║    ╚██╗ ██╔╝██║██╔████╔██║       ",
-	"       ██║     ╚████╔╝ ██║██║╚██╔╝██║       ",
-	"       ███████╗ ╚██╔╝  ██║██║ ╚═╝ ██║       ",
-	"       ╚══════╝  ╚═╝   ╚═╝╚═╝     ╚═╝       ",
-	"                                            ",
-	"𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ",
-}
+-- 	"𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ",
+-- 	"                                            ",
+-- 	"       ██╗    ██╗   ██╗██╗███╗   ███╗       ",
+-- 	"       ██║    ██║   ██║██║████╗ ████║       ",
+-- 	"       ██║    ╚██╗ ██╔╝██║██╔████╔██║       ",
+-- 	"       ██║     ╚████╔╝ ██║██║╚██╔╝██║       ",
+-- 	"       ███████╗ ╚██╔╝  ██║██║ ╚═╝ ██║       ",
+-- 	"       ╚══════╝  ╚═╝   ╚═╝╚═╝     ╚═╝       ",
+-- 	"                                            ",
+-- 	"𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ",
+-- }
 
 lvim.builtin.dashboard.custom_section = {
 	a = { description = { "  New File           " }, command = "DashboardNewFile" },
@@ -277,21 +277,21 @@ lvim.plugins = {
 	},
 }
 -- language specific setup -----------------------------------------
-lvim.lang.javascript.formatters = { { exe = "prettier" } }
-lvim.lang.typescript.formatters = lvim.lang.javascript.formatters
-lvim.lang.javascriptreact.formatters = lvim.lang.javascript.formatters
-lvim.lang.typescriptreact.formatters = lvim.lang.javascript.formatters
-lvim.lang.javascript.linters = { { exe = "eslint" } }
-lvim.lang.javascriptreact.linters = lvim.lang.javascript.linters
-lvim.lang.typescript.linters = lvim.lang.javascript.linters
-lvim.lang.typescriptreact.linters = lvim.lang.javascript.linters
+-- lvim.lang.javascript.formatters = { { exe = "prettier" } }
+-- lvim.lang.typescript.formatters = lvim.lang.javascript.formatters
+-- lvim.lang.javascriptreact.formatters = lvim.lang.javascript.formatters
+-- lvim.lang.typescriptreact.formatters = lvim.lang.javascript.formatters
+-- lvim.lang.javascript.linters = { { exe = "eslint" } }
+-- lvim.lang.javascriptreact.linters = lvim.lang.javascript.linters
+-- lvim.lang.typescript.linters = lvim.lang.javascript.linters
+-- lvim.lang.typescriptreact.linters = lvim.lang.javascript.linters
 
-lvim.lang.css.formatters = { { exe = "prettier" } }
--- lvim.lang.emmet.active = true
-lvim.lang.html.formatters = { { exe = "prettier" } }
-lvim.lang.json.formatters = { { exe = "prettier" } }
-lvim.lang.lua.formatters = { { exe = "stylua" } }
-lvim.lang.yaml.formatters = { { exe = "prettier" } }
+-- lvim.lang.css.formatters = { { exe = "prettier" } }
+-- -- lvim.lang.emmet.active = true
+-- lvim.lang.html.formatters = { { exe = "prettier" } }
+-- lvim.lang.json.formatters = { { exe = "prettier" } }
+-- lvim.lang.lua.formatters = { { exe = "stylua" } }
+-- lvim.lang.yaml.formatters = { { exe = "prettier" } }
 
 -- vim defalts -----------------------------------------------------
 vim.opt.wrap = true
