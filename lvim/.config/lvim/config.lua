@@ -28,19 +28,19 @@ lvim.builtin.nvimtree.gitignore = 1
 lvim.builtin.nvimtree.ignore = { "node_modules" }
 lvim.builtin.telescope.defaults.file_ignore_patterns = { "node_modules", "build" }
 
--- lvim.builtin.dashboard.custom_header = {
+lvim.builtin.dashboard.custom_header = {
 
--- 	"𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ",
--- 	"                                            ",
--- 	"       ██╗    ██╗   ██╗██╗███╗   ███╗       ",
--- 	"       ██║    ██║   ██║██║████╗ ████║       ",
--- 	"       ██║    ╚██╗ ██╔╝██║██╔████╔██║       ",
--- 	"       ██║     ╚████╔╝ ██║██║╚██╔╝██║       ",
--- 	"       ███████╗ ╚██╔╝  ██║██║ ╚═╝ ██║       ",
--- 	"       ╚══════╝  ╚═╝   ╚═╝╚═╝     ╚═╝       ",
--- 	"                                            ",
--- 	"𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ",
--- }
+	"𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ",
+	"                                            ",
+	"       ██╗    ██╗   ██╗██╗███╗   ███╗       ",
+	"       ██║    ██║   ██║██║████╗ ████║       ",
+	"       ██║    ╚██╗ ██╔╝██║██╔████╔██║       ",
+	"       ██║     ╚████╔╝ ██║██║╚██╔╝██║       ",
+	"       ███████╗ ╚██╔╝  ██║██║ ╚═╝ ██║       ",
+	"       ╚══════╝  ╚═╝   ╚═╝╚═╝     ╚═╝       ",
+	"                                            ",
+	"𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ𝘭𝓿⫯ⲙ𝘭ᨆ⫯ⲙ",
+}
 
 lvim.builtin.dashboard.custom_section = {
 	a = { description = { "  New File           " }, command = "DashboardNewFile" },
@@ -277,25 +277,35 @@ lvim.plugins = {
 	},
 }
 -- language specific setup -----------------------------------------
--- lvim.lang.javascript.formatters = { { exe = "prettier" } }
--- lvim.lang.typescript.formatters = lvim.lang.javascript.formatters
--- lvim.lang.javascriptreact.formatters = lvim.lang.javascript.formatters
--- lvim.lang.typescriptreact.formatters = lvim.lang.javascript.formatters
--- lvim.lang.javascript.linters = { { exe = "eslint" } }
--- lvim.lang.javascriptreact.linters = lvim.lang.javascript.linters
--- lvim.lang.typescript.linters = lvim.lang.javascript.linters
--- lvim.lang.typescriptreact.linters = lvim.lang.javascript.linters
-
--- lvim.lang.css.formatters = { { exe = "prettier" } }
--- -- lvim.lang.emmet.active = true
--- lvim.lang.html.formatters = { { exe = "prettier" } }
--- lvim.lang.json.formatters = { { exe = "prettier" } }
--- lvim.lang.lua.formatters = { { exe = "stylua" } }
--- lvim.lang.yaml.formatters = { { exe = "prettier" } }
+local formatters = require("lvim.lsp.null-ls.formatters")
+formatters.setup({
+	{
+		exe = "prettier",
+		-- args = { "--print-width", "100" },
+		filetypes = {
+			"typescript",
+			"typescriptreact",
+			"html",
+			"json",
+			"yaml",
+			"css",
+			"javascript",
+			"javascriptreact",
+		},
+	},
+	{ exe = "stylua", filetypes = { "lua" } },
+})
+local linters = require("lvim.lsp.null-ls.linters")
+linters.setup({
+	{
+		exe = "eslint",
+		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+	},
+})
 
 -- vim defalts -----------------------------------------------------
 vim.opt.wrap = true
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 vim.opt.history = 1000
 vim.opt.lazyredraw = false
 vim.opt.relativenumber = true
@@ -345,6 +355,8 @@ lvim.builtin.which_key.mappings[","] = {
 	T = { "<cmd>Twilight<CR>", "Twilight toggle" },
 	["-"] = { ":split<CR>", "Split below" },
 	["_"] = { ":vsplit<CR>", "Split right" },
+	c = { ":Codi<CR>", "Run Codi" },
+	C = { ":Codi!<CR>", "Close Codi" },
 	d = { "<C-x>", "Decrement" },
 	f = { "<C-w>|<C-w>_", "Full screen markdown preview" },
 	i = { "<C-a>", "Increment" },

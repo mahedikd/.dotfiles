@@ -12,3 +12,7 @@ export TLDR_PARAM='blue'
 export VISUAL=lvim
 export EDITOR="$VISUAL"
 export PATH="$PATH:`yarn global bin --offline`"
+
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
