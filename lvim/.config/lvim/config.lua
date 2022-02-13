@@ -296,12 +296,12 @@ formatters.setup({
 	{ exe = "stylua", filetypes = { "lua" } },
 })
 local linters = require("lvim.lsp.null-ls.linters")
-linters.setup({
-	{
-		exe = "eslint",
-		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-	},
-})
+-- linters.setup({
+-- 	{
+-- 		exe = "eslint",
+-- 		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+-- 	},
+-- })
 
 -- vim defalts -----------------------------------------------------
 vim.opt.wrap = true

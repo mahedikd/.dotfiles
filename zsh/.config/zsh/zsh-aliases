@@ -65,6 +65,7 @@ alias vram='~/Code/scripts/vramfs_start.sh; disown'
 alias vramK='pkill vramfs'
 alias wget='wget -c'
 alias windowclass="xprop | grep 'CLASS'"
+alias mongo='mongod --config /etc/mongodb.conf'
 
 # sys
 alias clean='sudo pacman -Scc'

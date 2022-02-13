@@ -106,7 +106,6 @@ Sessionx.vim
 [._]sw[a-p]
 __pycache__/
 bower_components
-build/
 build/Release
 cover/
 coverage
@@ -150,5 +149,6 @@ wheels/
 yarn-debug.log*
 yarn-error.log*
 !package.json
+!package-lock.json
 !.eslintrc.json
 !.prettierrc.json
