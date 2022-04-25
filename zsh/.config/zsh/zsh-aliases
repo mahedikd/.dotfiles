@@ -80,8 +80,8 @@ alias upgrade='sudo pacman -Su'
 
 # docker
 alias dockercontainersize='docker ps -as'
-alias server='docker start db && docker start webserver && docker start wordpress'
-alias serverstop='docker stop wordpress && docker stop webserver && docker stop db'
+alias server='docker start mysql && docker start phpmyadmin && docker start wp'
+alias serverstop='docker stop wp && docker stop phpmyadmin && docker stop mysql'
 
 # conf
 alias kittyconfig='vi ~/.config/kitty/kitty.conf'
